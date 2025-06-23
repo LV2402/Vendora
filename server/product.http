@@ -1,0 +1,31 @@
+###add product
+post http://localhost:2402/product-api/product
+Content-Type: application/json
+
+{
+    "productname": "b",
+    "price": 1000000,
+    "category": "b",
+    "stockavailability": false,
+    "description": "b b b",
+    "sellerId":"68516158a6ba0e420d23aa70"
+}
+
+###get all products of that seller
+get http://localhost:2402/product-api/products/68516158a6ba0e420d23aa70
+
+###update product
+put http://localhost:2402/product-api/product/6856d7ea806a2b2fae38b554
+Content-Type: application/json
+
+{
+    "productname": "Fridge",
+    "price": 10000,
+    "category": "Kitchen",
+    "stockavailability": false,
+    "description": "first class fridge",
+    "sellerId": "68516158a6ba0e420d23aa70"
+}
+
+###delete product
+delete http://localhost:2402/product-api/product/68516201a6ba0e420d23aa78

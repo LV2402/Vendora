@@ -1,0 +1,18 @@
+###seller register
+post http://localhost:2402/seller-api/signup 
+Content-Type: application/json
+
+{
+    "sellername":"vn",
+    "password":"vn",
+    "email":"vn@gmail.com"
+}
+
+####seller login
+post http://localhost:2402/seller-api/signin
+Content-Type: application/json
+
+{
+    "sellername":"vamshi",
+    "password":"vamshi"
+}

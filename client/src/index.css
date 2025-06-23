@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@keyframes fade-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* In your index.css or tailwind.css */
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out both;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

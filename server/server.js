@@ -15,10 +15,11 @@ const dbURL = process.env.DB_URL
 
 app.use(exp.json());
 app.use(cors({
-    origin: 'https://vendora-6sar.onrender.com', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true 
+  origin: ['http://localhost:5173', 'https://vendora-6sar.onrender.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
 }));
+
 
 
 mongoose.connect(dbURL)

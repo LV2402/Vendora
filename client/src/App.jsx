@@ -2,7 +2,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Header from './layout/header';
 import Footer from './layout/footer';
-import Signup from './pages/signup';
+import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 import Home from './pages/Home';
 import Profile from './pages/profile';

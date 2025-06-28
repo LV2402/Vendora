@@ -46,7 +46,7 @@ function Signup() {
       }
     }catch(err){
       console.error("Error creating account:", err)
-      alert("Failed to create account. Please try again.")
+      alert("Failed to create account. Please try again. " + err.message)
     }
   }
 

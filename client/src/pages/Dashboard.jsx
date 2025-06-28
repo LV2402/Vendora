@@ -34,7 +34,7 @@ function Dashboard() {
 
   useEffect(() => {
     if (sellerId) {
-      fetch(`http://localhost:2402/product-api/products/${sellerId}`)
+      fetch(`https://vendora-6sar.onrender.com/product-api/products/${sellerId}`)
         .then(res => res.json())
         .then(data => {
           if (data.message === 'products') {
@@ -72,7 +72,7 @@ function Dashboard() {
 
   async function handleDelete(_id) {
     try {
-      const res = await fetch(`http://localhost:2402/product-api/product/${_id}`, {
+      const res = await fetch(`https://vendora-6sar.onrender.com/product-api/product/${_id}`, {
         method: "DELETE"
       });
       const data = await res.json();
@@ -91,8 +91,8 @@ function Dashboard() {
       : { ...newProduct, sellerId };
 
     const url = editingProduct
-      ? `http://localhost:2402/product-api/product/${editingProduct._id}`
-      : 'http://localhost:2402/product-api/product';
+      ? `https://vendora-6sar.onrender.com/product-api/product/${editingProduct._id}`
+      : 'https://vendora-6sar.onrender.com/product-api/product';
 
     const method = editingProduct ? 'PUT' : 'POST';
 
@@ -116,7 +116,7 @@ function Dashboard() {
           description: ''
         });
 
-        const refreshed = await fetch(`http://localhost:2402/product-api/products/${sellerId}`);
+        const refreshed = await fetch(`https://vendora-6sar.onrender.com/product-api/products/${sellerId}`);
         const refreshedData = await refreshed.json();
         if (refreshedData.message === 'products') {
           setProducts(refreshedData.payload);

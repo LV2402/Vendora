@@ -15,7 +15,7 @@ function Profile() {
     if (!isLoggedIn) {
       navigate('/signin');
     } else {
-      fetch(`http://localhost:2402/product-api/products/${sellerId}`)
+      fetch(`https://vendora-6sar.onrender.com/product-api/products/${sellerId}`)
         .then(res => res.json())
         .then(data => {
           if (data.message === 'products') {

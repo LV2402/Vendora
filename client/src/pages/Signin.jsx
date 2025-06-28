@@ -22,7 +22,7 @@ function Signin() {
   async function handleSubmit(e) {
     e.preventDefault()
     try {
-      const res = await fetch("http://localhost:2402/seller-api/signin", {
+      const res = await fetch("https://vendora-6sar.onrender.com/seller-api/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

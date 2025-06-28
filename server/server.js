@@ -15,7 +15,7 @@ const dbURL = process.env.DB_URL
 
 app.use(exp.json());
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://vendora-rose.vercel.app/'],
+  origin: ['https://vendora-rose.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
